@@ -1,0 +1,8 @@
+
+dataloader
+==========
+
+.. automodule:: graphnet.data.dataloader
+   :members:
+   :show-inheritance:
+   :undoc-members:

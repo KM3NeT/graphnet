@@ -1,0 +1,8 @@
+
+prometheus
+==========
+
+.. automodule:: graphnet.models.detector.prometheus
+   :members:
+   :show-inheritance:
+   :undoc-members:

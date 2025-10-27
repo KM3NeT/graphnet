@@ -1,0 +1,8 @@
+
+coarsening
+==========
+
+.. automodule:: graphnet.models.coarsening
+   :members:
+   :show-inheritance:
+   :undoc-members:

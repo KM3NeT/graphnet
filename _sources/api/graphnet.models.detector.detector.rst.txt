@@ -1,0 +1,8 @@
+
+detector
+========
+
+.. automodule:: graphnet.models.detector.detector
+   :members:
+   :show-inheritance:
+   :undoc-members:

@@ -1,0 +1,34 @@
+
+edges
+=====
+
+
+.. automodule:: graphnet.models.graphs.edges
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+
+|start-h2| Subpackages |end-h2|
+
+.. toctree::
+   :maxdepth: 2
+
+   graphnet.models.graphs.edges.minkowski
+
+
+.. |start-h2| raw:: html
+
+     <h2>
+
+.. |end-h2| raw:: html
+
+     </h2>
+
+.. |start-h3| raw:: html
+
+     <h3>
+
+.. |end-h3| raw:: html
+
+     </h3>
