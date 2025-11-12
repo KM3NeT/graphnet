@@ -398,10 +398,35 @@
       
         
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#api-graphnet-data-readers-km3netreader--page-root" class="md-nav__link">km3netreader</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#graphnet.data.readers.km3netreader.KM3NeTReader" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">KM3NeTReader</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#graphnet.data.readers.km3netreader.KM3NeTReader.find_files" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">find_files()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
   </ul>
 </nav>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#graphnet.data.readers.km3netreader.KM3NeTReader" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">KM3NeTReader</span></code></a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#graphnet.data.readers.km3netreader.KM3NeTReader.find_files" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">find_files()</span></code></a>
       
+    
+    </li></ul>
+    
+    </li></ul>
     
     </li>
     <li class="md-nav__item">
@@ -548,7 +573,18 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#api-graphnet-data-readers-km3netreader--page-root" class="md-nav__link">km3netreader</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#graphnet.data.readers.km3netreader.KM3NeTReader" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">KM3NeTReader</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#graphnet.data.readers.km3netreader.KM3NeTReader.find_files" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">find_files()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
   </ul>
 </nav>
               </div>
@@ -558,8 +594,43 @@
         <div class="md-content">
           <article class="md-content__inner md-typeset" role="main">
             
-  <section id="km3netreader">
-<h1 id="api-graphnet-data-readers-km3netreader--page-root">km3netreader<a class="headerlink" href="#api-graphnet-data-readers-km3netreader--page-root" title="Link to this heading">¶</a></h1>
+  <section id="module-graphnet.data.readers.km3netreader">
+<span id="km3netreader"></span><h1 id="api-graphnet-data-readers-km3netreader--page-root">km3netreader<a class="headerlink" href="#api-graphnet-data-readers-km3netreader--page-root" title="Link to this heading">¶</a></h1>
+<p>Module for reading KM3NeT files.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="graphnet.data.readers.km3netreader.KM3NeTReader">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphnet.data.readers.km3netreader.</span></span><span class="sig-name descname"><span class="pre">KM3NeTReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_folder</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/graphnet/data/readers/km3netreader.html#KM3NeTReader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#graphnet.data.readers.km3netreader.KM3NeTReader" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="graphnet.data.readers.graphnet_file_reader.html#graphnet.data.readers.graphnet_file_reader.GraphNeTFileReader" title="graphnet.data.readers.graphnet_file_reader.GraphNeTFileReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphNeTFileReader</span></code></a></p>
+<p>Class for reading KM3NeT files.</p>
+<p>Construct <cite>Logger</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>class_name</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>level</strong> (<em>int</em>)</p></li>
+<li><p><strong>log_folder</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>kwargs</strong> (<em>Any</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="graphnet.data.readers.km3netreader.KM3NeTReader.find_files">
+<span class="sig-name descname"><span class="pre">find_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/graphnet/data/readers/km3netreader.html#KM3NeTReader.find_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#graphnet.data.readers.km3netreader.KM3NeTReader.find_files" title="Link to this definition">¶</a></dt>
+<dd><p>Find all files in a directory with the correct extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]</span>) – The path to the directory to be searched.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of file paths.</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
 </section>
 
 
