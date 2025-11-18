@@ -438,7 +438,6 @@
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_determine_unique_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""Determine the unique ID for events."""</span>
-        <span class="n">padding_value</span> <span class="o">=</span> <span class="mf">99999999.0</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">mc_trks</span><span class="o">.</span><span class="n">E</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Monte Carlo</span>
             <span class="n">primaries</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">mc_trks</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
             <span class="n">nus_flavor</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
