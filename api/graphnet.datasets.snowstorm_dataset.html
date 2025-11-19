@@ -357,10 +357,24 @@
       
         
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#api-graphnet-datasets-snowstorm-dataset--page-root" class="md-nav__link">snowstorm_dataset</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#graphnet.datasets.snowstorm_dataset.SnowStormDataset" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SnowStormDataset</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
   </ul>
 </nav>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#graphnet.datasets.snowstorm_dataset.SnowStormDataset" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SnowStormDataset</span></code></a>
       
+    
+    </li></ul>
     
     </li>
     <li class="md-nav__item">
@@ -428,7 +442,14 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#api-graphnet-datasets-snowstorm-dataset--page-root" class="md-nav__link">snowstorm_dataset</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#graphnet.datasets.snowstorm_dataset.SnowStormDataset" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SnowStormDataset</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
   </ul>
 </nav>
               </div>
@@ -438,8 +459,40 @@
         <div class="md-content">
           <article class="md-content__inner md-typeset" role="main">
             
-  <section id="snowstorm-dataset">
-<h1 id="api-graphnet-datasets-snowstorm-dataset--page-root">snowstorm_dataset<a class="headerlink" href="#api-graphnet-datasets-snowstorm-dataset--page-root" title="Link to this heading">¶</a></h1>
+  <section id="module-graphnet.datasets.snowstorm_dataset">
+<span id="snowstorm-dataset"></span><h1 id="api-graphnet-datasets-snowstorm-dataset--page-root">snowstorm_dataset<a class="headerlink" href="#api-graphnet-datasets-snowstorm-dataset--page-root" title="Link to this heading">¶</a></h1>
+<p>Snowstorm dataset module hosted on the IceCube Collaboration servers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="graphnet.datasets.snowstorm_dataset.SnowStormDataset">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphnet.datasets.snowstorm_dataset.</span></span><span class="sig-name descname"><span class="pre">SnowStormDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">download_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_dataloader_kwargs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_dataloader_kwargs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_dataloader_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/graphnet/datasets/snowstorm_dataset.html#SnowStormDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#graphnet.datasets.snowstorm_dataset.SnowStormDataset" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="graphnet.data.curated_datamodule.html#graphnet.data.curated_datamodule.IceCubeHostedDataset" title="graphnet.data.curated_datamodule.IceCubeHostedDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">IceCubeHostedDataset</span></code></a></p>
+<p>IceCube SnowStorm simulation dataset.</p>
+<p>More information can be found at
+<a class="reference external" href="https://wiki.icecube.wisc.edu/index.php/SnowStorm_MC#File_Locations">https://wiki.icecube.wisc.edu/index.php/SnowStorm_MC#File_Locations</a>
+This is a IceCube Collaboration simulation dataset.
+Requires a username and password.</p>
+<p>Construct SnowStormDataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>run_ids</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</span>) – List of RunIDs to include.</p></li>
+<li><p><strong>graph_definition</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="graphnet.models.data_representation.graphs.graph_definition.html#graphnet.models.data_representation.graphs.graph_definition.GraphDefinition" title="graphnet.models.data_representation.graphs.graph_definition.GraphDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">GraphDefinition</span></code></a></span>) – Method that defines the data representation.</p></li>
+<li><p><strong>download_dir</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Directory to download dataset to.</p></li>
+<li><p><strong>truth</strong> (<em>Optional</em>) – List of event-level truth to include. Will
+include all available information if not given.</p></li>
+<li><p><strong>features</strong> (<em>Optional</em>) – List of input features from pulsemap to use.
+If not given, all available features will be
+used.</p></li>
+<li><p><strong>train_dataloader_kwargs</strong> (<em>Optional</em>) – Arguments for the training
+DataLoader. Default None.</p></li>
+<li><p><strong>validation_dataloader_kwargs</strong> (<em>Optional</em>) – Arguments for the
+validation DataLoader, Default None.</p></li>
+<li><p><strong>test_dataloader_kwargs</strong> (<em>Optional</em>) – Arguments for the test
+DataLoader. Default None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 </section>
 
 
