@@ -363,8 +363,10 @@
     <span class="n">assert_no_uint_values</span><span class="p">,</span>
     <span class="n">filter_None_NaN</span><span class="p">,</span>
 <span class="p">)</span>
+
 <span class="k">if</span> <span class="n">has_km3net_package</span><span class="p">()</span> <span class="ow">or</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">km3io</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ki</span>
+
 
 <div class="viewcode-block" id="KM3NeTTruthExtractor">
 <a class="viewcode-back" href="../../../../../api/graphnet.data.extractors.km3net.km3nettruthextractor.html#graphnet.data.extractors.km3net.km3nettruthextractor.KM3NeTTruthExtractor">[docs]</a>
@@ -503,11 +505,11 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"File type not recognized"</span><span class="p">)</span>
 
         <span class="n">unique_id</span> <span class="o">=</span> <span class="n">create_unique_id_run_by_run</span><span class="p">(</span>
-                    <span class="n">file_type</span><span class="o">=</span><span class="n">file_type</span><span class="p">,</span>
-                    <span class="n">run_id</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">run_id</span><span class="p">),</span>
-                    <span class="n">evt_id</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">id</span><span class="p">),</span>
-                    <span class="n">hnl_model</span><span class="o">=</span><span class="n">model_hnl</span><span class="p">,</span>
-                <span class="p">)</span>
+            <span class="n">file_type</span><span class="o">=</span><span class="n">file_type</span><span class="p">,</span>
+            <span class="n">run_id</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">run_id</span><span class="p">),</span>
+            <span class="n">evt_id</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">id</span><span class="p">),</span>
+            <span class="n">hnl_model</span><span class="o">=</span><span class="n">model_hnl</span><span class="p">,</span>
+        <span class="p">)</span>
 
         <span class="k">return</span> <span class="p">{</span>
             <span class="s2">"run_id"</span><span class="p">:</span> <span class="n">run_id</span><span class="p">,</span>
@@ -712,7 +714,9 @@
             <span class="c1">##############################################################</span>
             <span class="c1"># MUON-FILE####################################################</span>
             <span class="c1">##############################################################</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">primaries</span><span class="o">.</span><span class="n">pdgid</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">nus_flavor</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">primaries</span><span class="o">.</span><span class="n">pdgid</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">primaries</span><span class="o">.</span><span class="n">pdgid</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">nus_flavor</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+                <span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">primaries</span><span class="o">.</span><span class="n">pdgid</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mf">0.1</span>
+            <span class="p">):</span>
                 <span class="n">primaries_jshower</span> <span class="o">=</span> <span class="n">ki</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">best_jshower</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">trks</span><span class="p">)</span>
                 <span class="n">primaries_jmuon</span> <span class="o">=</span> <span class="n">ki</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">best_jmuon</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">trks</span><span class="p">)</span>
                 <span class="n">dict_truth</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_construct_truth_dictionary</span><span class="p">(</span>
@@ -727,7 +731,9 @@
             <span class="c1">###############################################################</span>
             <span class="c1"># HNL-FILE######################################################</span>
             <span class="c1">###############################################################</span>
-            <span class="k">elif</span> <span class="p">(</span><span class="mi">5914</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">mc_trks</span><span class="o">.</span><span class="n">pdgid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">mc_trks</span><span class="o">.</span><span class="n">pdgid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="mi">5914</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">mc_trks</span><span class="o">.</span><span class="n">pdgid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">mc_trks</span><span class="o">.</span><span class="n">pdgid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+            <span class="p">):</span>
                 <span class="n">primaries_jshower</span> <span class="o">=</span> <span class="n">ki</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">best_jshower</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">trks</span><span class="p">)</span>
                 <span class="n">primaries_jmuon</span> <span class="o">=</span> <span class="n">ki</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">best_jmuon</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">trks</span><span class="p">)</span>
                 <span class="n">dict_truth</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_construct_truth_dictionary</span><span class="p">(</span>
